@@ -257,7 +257,7 @@ nav h1 a {
 }
 
 .inside header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -266,7 +266,7 @@ nav h1 a {
 .inside #map-container {
     background: blue none repeat scroll 0 0;
     height: 87%;
-    position: fixed;
+    position: relative;
     top: 80px;
     width: 80%;
     display: flex;
@@ -274,7 +274,6 @@ nav h1 a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
 }
 
 .inside #map {
@@ -302,12 +301,10 @@ nav h1 a {
 
 #restaurant-img {
     width: 90%;
-    margin-top: 15px;
 }
 
 #restaurant-address {
     font-size: 12pt;
-    margin: 10px 0px;
 }
 
 #restaurant-cuisine {
@@ -328,16 +325,13 @@ nav h1 a {
     padding: 140px 40px 30px;
     width: 80%;
     display: flex;
-    height: 300px;
+    height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 400px;
 }
 
-#reviews-container {
-    margin-top: 600px;
-}
+#reviews-container {}
 
 #reviews-container {
     padding: 30px 40px 80px;
@@ -376,40 +370,24 @@ nav h1 a {
     color: #666;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    #reviews-container h2 {
-        margin-top: 100px;
+@media only screen and (min-device-width: 360px) and (max-device-width: 767px) {
+    .inside {
+        width: 100%;
     }
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+        #reviews-container h2 {}
+        #restaurant-container,
+        #reviews-container {}
+        #restaurants-list {
+            width: auto;
+            flex-direction: row;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+    }
+    @media only screen and (min-device-width: 1400px) and (max-device-width: 1600px) {}
     #restaurant-container,
-    #reviews-container {
-        margin-top: 450px;
-    }
-}
-
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-    #reviews-container h2 {
-        margin-top: 50px;
-    }
-    #restaurant-container,
-    #reviews-container {
-        margin-top: 550px;
-    }
-    #restaurants-list {
-        width: auto;
-        flex-direction: row;
-        align-items: baseline;
-        flex-wrap: wrap;
-    }
-}
-
-@media only screen and (min-device-width: 1400px) and (max-device-width: 1600px) {
-    #reviews-container h2 {
-        margin-top: 50px;
-    }
-    #restaurant-container,
-    #reviews-container {
-        margin-top: 550px;
-    }
+    #reviews-container {}
     #restaurants-list {
         width: auto;
         flex-direction: row;
